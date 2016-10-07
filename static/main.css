@@ -1,2 +1,61 @@
-body {
-  color: #000000; }
+*, html, body {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee;
+  margin: 0 0 0 0; }
+
+a {
+  display: block; }
+
+*, html, body {
+  color: #222; }
+
+p, li {
+  font-family: 'Source Sans Pro';
+  font-size: .9em; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.nav-bar-li {
+  color: #494949;
+  font-weight: 500; }
+  .nav-bar-li:hover {
+    color: #111; }
+
+.nav-bar-wrapper {
+  display: block;
+  height: 100px;
+  width: 100%; }
+  .nav-bar-wrapper li {
+    text-align: right;
+    padding: 0 15px 0 0;
+    line-height: 2em; }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.nav-img {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto; }
+
+.nav-img-wrapper {
+  display: block;
+  height: 100px;
+  width: 100%; }
+
+.nav-logo {
+  width: 100px;
+  height: 100px; }
