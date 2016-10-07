@@ -1,0 +1,26 @@
+*, html, body {
+    color: #222;
+}
+
+p, li {
+    font-family: 'Source Sans Pro';
+    font-size: .9em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+
+    }
+}
+
+.nav-bar-li {
+    color: #494949;
+    font-weight: 500;
+
+    &:hover {
+        color: #111;
+    }
+}
