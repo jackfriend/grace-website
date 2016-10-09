@@ -2,7 +2,7 @@
   padding: 0 0 0 0;
   margin: 0 0 0 0; }
 
-html, body {
+html, body, #app {
   width: 100%;
   height: 100%;
   background-color: #eeeeee;
@@ -28,6 +28,11 @@ a {
   .nav-bar-li:hover {
     color: #111; }
 
+@media (max-width: 376px) {
+  .nav-bar-wrapper {
+    font-size: 1.5em;
+    line-height: 3em; } }
+
 .nav-bar-wrapper {
   display: block;
   height: 100px;
@@ -41,6 +46,7 @@ a {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  position: absolute;
   width: 200px;
   height: 100%;
   background-color: #ffffff;
@@ -59,3 +65,39 @@ a {
 .nav-logo {
   width: 100px;
   height: 100px; }
+
+@media (max-width: 376px) {
+  .nav-container {
+    width: 100%; }
+  .nav-bar-wrapper {
+    height: auto; }
+    .nav-bar-wrapper > ul > li {
+      text-align: center;
+      padding: 0 0 0 0; } }
+
+.box {
+  width: 600px;
+  height: 100%;
+  display: inline-block; }
+
+.carousel-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+.carousel-container {
+  height: 400px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap; }
+  .carousel-container::-webkit-scrollbar {
+    display: none; }
+
+.contact {
+  background-color: #fec606; }
+
+.box-one {
+  background-color: pink; }
+
+.box-two {
+  background-color: honeydew; }
