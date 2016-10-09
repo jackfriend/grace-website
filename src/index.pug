@@ -1,7 +1,15 @@
 doctype html
-head
-    title Grace Friend Realtor
-    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet")
-    link(rel="stylesheet", type="text/css", href="static/main.css")
-body
-    include includes/_nav.pug
+html(lang="en-us")
+    head
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet")
+        link(rel="stylesheet", type="text/css", href="static/main.css")
+        title Grace Friend Realtor
+        script(src="resources/jquery-3.1.1.min.js")
+        script(src="resources/vue.min.js")
+        script(src="resources/vue-resource.min.js")
+    body
+        div(id="app")
+            include includes/_nav.pug
+            include includes/_block.pug
+        script(src="static/script.js")

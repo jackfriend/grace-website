@@ -14,6 +14,7 @@
     display: flex
     justify-content: space-between
     flex-direction: column
+    position: absolute
 
     width: 200px
     height: 100%
@@ -36,3 +37,15 @@
     height: 100px
 
 .nav-social-media-wrapper
+
+
+// Media queries
+@media (max-width: $small-bp)
+    .nav-container
+        width: 100%
+    .nav-bar-wrapper
+        height: auto
+
+        & > ul > li
+            text-align: center
+            padding: 0 0 0 0

@@ -1,1 +1,47 @@
-<!DOCTYPE html><head><title>Grace Friend Realtor</title><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"><link rel="stylesheet" type="text/css" href="static/main.css"></head><body><div class="nav-container"><div class="nav-img-wrapper"><div class="nav-img"><a class="nav-logo" href="index.html"><img class="nav-logo" src="static/logo.png"></a></div></div><div class="nav-bar-wrapper"><ul class="nav-bar-list"><li><a class="nav-bar-li" href="#">14 Platt Place, Wp</a></li><li><a class="nav-bar-li" href="#">85 Woodruff Lane, Hp</a></li><li><a class="nav-bar-li" href="#">Contact</a></li></ul></div><div class="nav-social-media-wrapper"><p style="margin: 10px auto">simple content</p></div></div></body>
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="static/main.css">
+  <title>Grace Friend Realtor</title>
+  <script src="resources/jquery-3.1.1.min.js"></script>
+  <script src="resources/vue.min.js"></script>
+  <script src="resources/vue-resource.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="nav-container">
+      <div class="nav-img-wrapper">
+        <div class="nav-img">
+          <a class="nav-logo" href="index.html">
+            <img class="nav-logo" src="static/logo.png">
+          </a>
+        </div>
+      </div>
+      <div class="nav-bar-wrapper">
+        <ul class="nav-bar-list">
+          <li v-for="house in houses"><a class="nav-bar-li" href="#">{{ house.name }}</a>
+          </li>
+          <li><a class="nav-bar-li" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-social-media-wrapper">
+        <p style="margin: 10px auto">simple content</p>
+      </div>
+    </div>
+    <div class="carousel-wrapper">
+      <div class="carousel-container">
+        <div class="box box-one"></div>
+        <div class="box box-two"></div>
+        <div class="box contact"></div>
+      </div>
+    </div>
+  </div>
+  <script src="static/script.js"></script>
+</body>
+
+</html>

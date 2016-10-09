@@ -1,12 +1,11 @@
 .nav-container
     .nav-img-wrapper
         .nav-img
-            a(href="index.html").nav-logo: img(src="/static/logo.png").nav-logo
+            a(href="index.html").nav-logo: img(src="static/logo.png").nav-logo
 
     .nav-bar-wrapper
         ul.nav-bar-list
-            li: a(href="#").nav-bar-li 14 Platt Place, Wp
-            li: a(href="#").nav-bar-li 85 Woodruff Lane, Hp
+            li(v-for="house in houses"): a(href="#").nav-bar-li {{ house.name }}
             li: a(href="#").nav-bar-li Contact
 
     .nav-social-media-wrapper

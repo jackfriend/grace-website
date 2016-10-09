@@ -24,3 +24,10 @@ a {
         color: #111;
     }
 }
+
+@media (max-width: $small-bp) {
+    .nav-bar-wrapper {
+        font-size: 1.5em;
+        line-height: 3em;
+    }
+}
