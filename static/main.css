@@ -22,6 +22,11 @@ a {
   text-decoration: none;
   color: inherit; }
 
+.contact h1 {
+  font-family: 'Lora';
+  color: #ffffff;
+  font-size: 3em; }
+
 .nav-bar-li {
   color: #494949;
   font-weight: 500; }
@@ -37,6 +42,8 @@ a {
   display: block;
   height: 100px;
   width: 100%; }
+  .nav-bar-wrapper ul {
+    list-style: none; }
   .nav-bar-wrapper li {
     text-align: right;
     padding: 0 15px 0 0;
@@ -79,6 +86,8 @@ a {
   width: 600px;
   height: 100%;
   display: inline-block; }
+  .box:first-child {
+    margin: 0 0 0 250px; }
 
 .carousel-wrapper {
   height: 100%;
@@ -93,11 +102,17 @@ a {
   .carousel-container::-webkit-scrollbar {
     display: none; }
 
-.contact {
-  background-color: #fec606; }
-
 .box-one {
   background-color: pink; }
 
 .box-two {
   background-color: honeydew; }
+
+.contact-container {
+  height: 100%;
+  width: 100%;
+  margin: 0 0 0 0;
+  background-color: #f39c12; }
+
+.contact-heading {
+  margin: 20px 0 0 20px; }
