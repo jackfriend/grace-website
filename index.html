@@ -14,33 +14,20 @@
 
 <body>
   <div id="app">
-    <div class="nav-container">
-      <div class="nav-img-wrapper">
-        <div class="nav-img">
-          <a class="nav-logo" href="index.html">
-            <img class="nav-logo" src="static/logo.png">
-          </a>
-        </div>
+    <div id="nav">
+      <div class="nav__logo">
+        <a href="#">
+          <img class="nav__logo__img" src="static/logo.png">
+        </a>
       </div>
-      <div class="nav-bar-wrapper">
-        <ul class="nav-bar-list">
-          <li v-for="house in houses"><a class="nav-bar-li" href="#">{{ house.name }}</a>
-          </li>
-          <li><a class="nav-bar-li" href="#">Contact</a>
+      <div class="nav__list">
+        <ul class="nav__ul">
+          <li class="nav__li" v-for="item in items"><a href="#">{{ item.name }}</a>
           </li>
         </ul>
       </div>
-      <div class="nav-social-media-wrapper">
-        <p style="margin: 10px auto">simple content</p>
-      </div>
-    </div>
-    <div class="carousel-wrapper">
-      <div class="carousel-container">
-        <div class="box contact">
-          <div class="contact-container">
-            <h1 class="contact-heading">Contact</h1>
-          </div>
-        </div>
+      <div class="nav__social">
+        <p>content</p>
       </div>
     </div>
   </div>
