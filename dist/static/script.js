@@ -1,9 +1,20 @@
-new Vue({
+var fetchData = function (url) {
+    var data;
+    $.ajax({
+        url: url,
+        type: 'GET',
+        dataType: 'json',
+        async: false,
+        success: function (res) {
+            data = res;
+        }
+    });
+    return data
+}
+
+var app = new Vue({
     el: '#app',
     data: {
-        houses: [
-            {name: '14 Platt pl, 10605'},
-            {name: '85 Woodruff Lane, Hp'}
-        ]
+        items: fetchData('static/data.json')
     }
 });

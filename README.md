@@ -5,6 +5,7 @@
 - sass
 - pug
 - gulp.js
+- BEM for css architecture
 
 ## Typography
 - **playfair display** for logo

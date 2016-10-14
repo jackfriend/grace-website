@@ -10,7 +10,7 @@ var paths = {
     static: './dist/static',
     pug: './src/index.pug',
     sass: './src/sass/imports.sass',
-    js: './src/js/script.js'
+    js: './src/js/*.js'
 }
 
 gulp.task('browser', function() {
@@ -44,6 +44,6 @@ gulp.task('js', function () {
 gulp.task('default', ['pug', 'sass', 'browser'], function () {
     gulp.watch('src/sass/**/*.*', ['sass']);
     gulp.watch('src/**/*.pug', ['pug']);
-    gulp.watch('src/js/script.js', ['js']);
+    gulp.watch('src/js/*.js', ['js']);
     gulp.watch('dist/**/*.*').on('change', browser.reload);
 });
