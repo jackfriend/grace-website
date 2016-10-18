@@ -1,0 +1,30 @@
+// when nav is on mobile
+.nav-container--mobile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+// for the __logo
+.nav__logo--mobile {
+    text-align: center;
+}
+
+
+// for the __list
+.nav__list--mobile {
+    .nav__listelement {
+        text-align: center;
+        padding: 0 0 0 0;
+        font-size: 1.4em;
+        line-height: 2.4em;
+    }
+}
+
+
+// for the __madeby
+.nav__madeby--mobile {
+    text-align: center;
+    font-size: .9em;
+}

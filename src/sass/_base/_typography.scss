@@ -1,0 +1,17 @@
+.nav__logo, .nav__list, .nav__madeby {
+    font-family: 'Source Sans Pro';
+    font-size: .9em;
+}
+
+a {
+    text-decoration: none;
+    color: #494949;
+    &:hover {
+        color: #000000;
+    }
+}
+
+.type__code {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1em;
+}

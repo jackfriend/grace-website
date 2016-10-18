@@ -1,7 +1,7 @@
 [
     {
-        "name": "14 Platt pl, 10605",
-        "image": "img/14-platt-pl/img-01.jpg",
+        "name": "14 Platt Pl, 10605",
+        "image": "img/img-01.jpg",
         "description": "The name's Bond. James Bond.",
         "location": "85 Albert Embankment, Vauxhal",
         "dates": {
@@ -12,7 +12,7 @@
         }
     },
     {
-        "name": "85 hartsdae ave",
+        "name": "85 Hartsdale Ave, 10605",
         "image": "img/14-platt-pl/img-01.jpg",
         "description": "The name's Bond. James Bond.",
         "location": "85 Albert Embankment, Vauxhal",

@@ -1,0 +1,25 @@
+// vars
+
+// carousel
+.carousel {
+    height: 350px;
+}
+
+// .carousel__list
+.carousel {
+    &__list {
+        margin:  0 0 0 0;
+        padding: 0 0 0 0;
+        height: 100%;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    &__house {
+        display: inline-block;
+        height: 100%;
+        width: 500px;
+        margin: 0  20px 0 0;
+        background-color: pink;
+    }
+}

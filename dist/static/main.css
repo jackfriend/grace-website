@@ -402,42 +402,102 @@ template {
 [hidden] {
   display: none; }
 
+.nav__logo, .nav__list, .nav__madeby {
+  font-family: 'Source Sans Pro';
+  font-size: .9em; }
+
+a {
+  text-decoration: none;
+  color: #494949; }
+  a:hover {
+    color: #000000; }
+
+.type__code {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1em; }
+
 html, body, #app {
   height: 100%;
   width: 100%;
   background-color: #f0f0f0; }
 
-#nav {
+::-webkit-scrollbar {
+  display: none; }
+
+.nav-container {
   width: 200px;
   height: 100%;
-  position: fixed;
+  position: fixed; }
+
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.nav {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-
-#nav {
-  background-color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .nav__logo {
   width: 100%;
   text-align: center;
   padding: 25px 0 0 0; }
 
-.nav__logo__img {
+.nav__logoimg {
   width: 100px; }
 
 .nav__list {
   text-align: right;
   line-height: 2em; }
-  .nav__list a {
-    text-decoration: none;
-    color: #222222; }
-    .nav__list a:hover {
-      color: #000000; }
 
-.nav__li {
+.nav__listelement {
   padding: 0 20px 0 0; }
 
 .nav__ul {
-  list-style: none; }
+  list-style: none;
+  padding: 0 0 0 0; }
+
+.nav__madeby {
+  text-align: center; }
+
+.carousel {
+  height: 350px; }
+
+.carousel__list {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  height: 100%;
+  width: 100%;
+  white-space: nowrap; }
+
+.carousel__house {
+  display: inline-block;
+  height: 100%;
+  width: 500px;
+  margin: 0  20px 0 0;
+  background-color: pink; }
+
+.nav-container--mobile {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.nav__logo--mobile {
+  text-align: center; }
+
+.nav__list--mobile .nav__listelement {
+  text-align: center;
+  padding: 0 0 0 0;
+  font-size: 1.4em;
+  line-height: 2.4em; }
+
+.nav__madeby--mobile {
+  text-align: center;
+  font-size: .9em; }

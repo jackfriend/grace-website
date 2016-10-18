@@ -1,0 +1,59 @@
+// vars
+$navshadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+
+// nav
+.nav {
+    background-color: #ffffff;
+    box-shadow: $navshadow;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// .nav__logo
+.nav {
+    &__logo {
+        width: 100%;
+        text-align: center;
+        padding: 25px 0 0 0;
+    }
+
+    &__logoimg {
+        width: 100px;
+    }
+}
+
+
+// .nav__list
+.nav {
+    &__list {
+        text-align: right;
+        line-height: 2em;
+    }
+
+    &__listelement {
+        padding: 0 20px 0 0;
+    }
+
+    &__ul {
+        list-style: none;
+        padding: 0 0 0 0;
+    }
+}
+
+//  .nav__madeby
+.nav {
+    &__madeby {
+        text-align: center;
+
+    }
+}
+
+
+
+// states
+// @import '../states/____'
