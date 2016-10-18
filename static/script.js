@@ -18,3 +18,11 @@ var app = new Vue({
         items: fetchData('static/data.json')
     }
 });
+
+if (  $(window).width() <= 480 ) {
+    $('.nav-container').addClass('nav-container--mobile');
+    $('.nav').addClass('nav--mobile type');
+    $('.nav__logo').addClass('nav__logo--mobile');
+    $('.nav__list').addClass('nav__list--mobile');
+    $('.nav__madeby').addClass('nav__madeby--mobile');
+}

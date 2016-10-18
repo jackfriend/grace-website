@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="resources/font-awesome-4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="static/main.css">
   <title>Grace Friend Realtor</title>
   <script src="resources/jquery-3.1.1.min.js"></script>
@@ -14,20 +16,34 @@
 
 <body>
   <div id="app">
-    <div id="nav">
-      <div class="nav__logo">
-        <a href="#">
-          <img class="nav__logo__img" src="static/logo.png">
-        </a>
+    <div class="nav-container">
+      <div class="nav">
+        <div class="nav__logo">
+          <a href="#">
+            <img class="nav__logoimg" src="static/logo.png">
+          </a>
+        </div>
+        <div class="nav__list">
+          <ul class="nav__ul">
+            <li class="nav__listelement" v-for="item in items"><a href="#">{{ item.name }}</a>
+            </li>
+            <li class="nav__listelement"><a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__madeby">
+          <p class="nav__madeby type__code"><a href="http://www.jackfriend.com"><i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by jF</a>
+          </p>
+        </div>
       </div>
-      <div class="nav__list">
-        <ul class="nav__ul">
-          <li class="nav__li" v-for="item in items"><a href="#">{{ item.name }}</a>
+    </div>
+    <div class="carousel-container">
+      <div class="carousel">
+        <ul class="carousel__list">
+          <li class="carousel__house" v-for="item in items" :style="{ 'background-image': 'url(' + item.image + ')' }">
+            <h1>{{ item.name }}</h1>
           </li>
         </ul>
-      </div>
-      <div class="nav__social">
-        <p>content</p>
       </div>
     </div>
   </div>
