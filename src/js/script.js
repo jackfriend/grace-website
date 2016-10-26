@@ -12,6 +12,22 @@ var fetchData = function (url) {
     return data
 }
 
+var template = `
+    <div class="carousel__item">
+        <img class="carousel__img" v-bind:src="houseImage">
+        <div class="carousel__info">
+          <h1>{{ houseName }}</h1>
+          <p>{{ houseDescription }}</p>
+        </div>
+        <div class="carousel__button"><a v-bind:href="houseLink">Read More</a>
+        </div>
+      </div>`
+
+Vue.component('house-item', {
+    template: template,
+    props: ['houseName', 'houseDescription', 'houseImage', 'houseLink']
+});
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -19,10 +35,14 @@ var app = new Vue({
     }
 });
 
+
+
+
+
 if (  $(window).width() <= 480 ) {
     $('.nav-container').addClass('nav-container--mobile');
     $('.nav').addClass('nav--mobile type');
     $('.nav__logo').addClass('nav__logo--mobile');
     $('.nav__list').addClass('nav__list--mobile');
     $('.nav__madeby').addClass('nav__madeby--mobile');
-}
+};

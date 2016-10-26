@@ -1,25 +1,55 @@
 // vars
+$itemshadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$itemwidth: 400px;
 
 // carousel
 .carousel {
-    height: 350px;
+    height: 400px;
+}
+
+.carousel__list {
+    list-style: none;
+    overflow-y: scroll;
+    white-space: nowrap;
+    height: 100%;
+    margin: 0 0 0 200px;
 }
 
 // .carousel__list
-.carousel {
-    &__list {
-        margin:  0 0 0 0;
-        padding: 0 0 0 0;
-        height: 100%;
-        width: 100%;
-        white-space: nowrap;
-    }
+.carousel__item {
+    width: $itemwidth;
+    box-shadow: $itemshadow;
+    background-color: #ffffff;
+    display: inline-block;
+    border-radius: 3px;
+    margin: 10px;
+}
 
-    &__house {
-        display: inline-block;
+.carousel__item:first-child {
+    margin-left: 80px;
+}
+
+.carousel__img {
+    width: $itemwidth;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    max-height: 200px;
+}
+
+.carousel__info {
+    margin: 15px;
+}
+
+.carousel__button {
+    height: 25px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    border-top: solid 1px #CFD8DC;
+
+    a{
+        width: 100%;
         height: 100%;
-        width: 500px;
-        margin: 0  20px 0 0;
-        background-color: pink;
     }
 }

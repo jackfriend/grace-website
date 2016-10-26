@@ -4,8 +4,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="resources/font-awesome-4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="static/main.css">
   <title>Grace Friend Realtor</title>
@@ -39,11 +39,9 @@
     </div>
     <div class="carousel-container">
       <div class="carousel">
-        <ul class="carousel__list">
-          <li class="carousel__house" v-for="item in items" :style="{ 'background-image': 'url(' + item.image + ')' }">
-            <h1>{{ item.name }}</h1>
-          </li>
-        </ul>
+        <div class="carousel__list">
+          <house-item v-for="item in items" v-bind:house-name="item.name" v-bind:house-description="item.description" v-bind:house-image="item.image" v-bind:house-link="item.name"></house-item>
+        </div>
       </div>
     </div>
   </div>

@@ -3,6 +3,7 @@ var pug       = require('gulp-pug');
 var sass      = require('gulp-sass');
 var rename    = require('gulp-rename');
 var prettify  = require('gulp-html-prettify');
+var run       = require('gulp-run');
 var browser   = require('browser-sync').create();
 
 var paths = {
@@ -39,6 +40,10 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
     return gulp.src(paths.js)
     .pipe(gulp.dest(paths.static));
+});
+
+gulp.task('produce', function () {
+    gulp.start('pug', 'sass', 'js');
 });
 
 gulp.task('default', ['pug', 'sass', 'browser'], function () {
