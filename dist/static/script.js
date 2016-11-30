@@ -1,3 +1,4 @@
+// this function gets the data
 var fetchData = function (url) {
     var data;
     $.ajax({
@@ -14,6 +15,7 @@ var fetchData = function (url) {
 };
 
 
+// create an object for each house
 Vue.component('house-item', {
     template: '#house-item-template',
     props: ['houseName', 'houseDescription', 'houseImage', 'houseLink', 'houseId'],
@@ -27,6 +29,8 @@ Vue.component('house-item', {
     }
 });
 
+
+// gotta create a new overlay object for each house
 Vue.component('overlay', {
     template: '#overlay-template',
     props: ['houseId'],
@@ -55,6 +59,8 @@ Vue.component('overlay', {
     }
 });
 
+
+// init the app
 var app = new Vue({
     el: '#app',
     data: {
@@ -65,6 +71,7 @@ var app = new Vue({
     }
 });
 
+// repsonsive for width
 if (  $(window).width() <= 480 ) {
     $('.nav-container').addClass('nav-container--mobile');
     $('.nav').addClass('nav--mobile type');
@@ -79,7 +86,12 @@ if ( $(window).width() <= 720 ) {
     $('.carousel__item').addClass('carousel__item--mobile');
 }
 
-$('.overlay-container').on('click', function () {
-    $('.overlay-container').removeClass('overlay-container--active');
-    $('.overlay--show').addClass('overlay--hide').removeClass('overlay--show');
+
+// to deactivate the overlay
+$('.overlay-container').on('click', function (event) {
+    if ( ($(event.target).is('.overlay')) ) {
+        console.log($(event.target))
+        $('.overlay-container').removeClass('overlay-container--active');
+        $('.overlay--show').addClass('overlay--hide').removeClass('overlay--show');
+    }
 });
