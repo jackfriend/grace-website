@@ -51,7 +51,6 @@ Vue.component('overlay', {
                 var $prev = $current.prev();
             } else {
                 var $prev = $current.parent().find('> :last');
-                console.log($prev)
             }
             $prev.addClass('overlay__img--current').removeClass('overlay__img--hide');
             $current.addClass('overlay__img--hide').removeClass('overlay__img--current');
@@ -67,7 +66,12 @@ var app = new Vue({
         items: fetchData('static/data.json')
     },
     methods: {
-
+        openOverlay: function (houseId) {
+            console.log('houseId: ', houseId);
+            var $overlayContainer = $('.overlay-container');
+            $overlayContainer.addClass('overlay-container--active');
+            $overlayContainer.find('#' + houseId).addClass('overlay--show').removeClass('overlay--hide');
+        }
     }
 });
 
@@ -90,7 +94,6 @@ if ( $(window).width() <= 720 ) {
 // to deactivate the overlay
 $('.overlay-container').on('click', function (event) {
     if ( ($(event.target).is('.overlay')) ) {
-        console.log($(event.target))
         $('.overlay-container').removeClass('overlay-container--active');
         $('.overlay--show').addClass('overlay--hide').removeClass('overlay--show');
     }

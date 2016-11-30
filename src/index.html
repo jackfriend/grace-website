@@ -26,7 +26,7 @@
                 <h1>{{ houseName }}</h1>
                 <p>{{ houseDescription }}</p>
             </div>
-            <div class="carousel__button"><a v-bind:href="houseLink" v-on:click="openOverlay( houseId)">Read More</a>
+            <div class="carousel__button"><a v-bind:href="houseLink" v-on:click="openOverlay(houseId)">Read More</a>
             </div>
         </div>
     </script>
@@ -74,7 +74,7 @@
         </div>
         <div class="nav__list">
           <ul class="nav__ul">
-            <li class="nav__listelement" v-for="item in items"><a href="#">{{ item.name }}</a>
+            <li class="nav__listelement" v-for="(item, index) in items"><a href="#" v-on:click="openOverlay(index)">{{ item.name }}</a>
             </li>
             <li class="nav__listelement"><a href="#">Contact</a>
             </li>
