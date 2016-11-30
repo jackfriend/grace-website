@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="resources/font-awesome-4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="static/main.css">
   <title>Grace Friend Realtor</title>
   <script src="resources/jquery-3.1.1.min.js"></script>
@@ -15,6 +16,54 @@
 </head>
 
 <body>
+
+  <div id="components">
+    <!-- house item template -->
+    <script type="text/x-template" id="house-item-template">
+        <div class="carousel__item" v-bind:id="houseId">
+            <img class="carousel__img" v-bind:src="houseImage">
+            <div class="carousel__info">
+                <h1>{{ houseName }}</h1>
+                <p>{{ houseDescription }}</p>
+            </div>
+            <div class="carousel__button"><a v-bind:href="houseLink" v-on:click="openOverlay( houseId)">Read More</a>
+            </div>
+        </div>
+    </script>
+
+    <!-- overlay template -->
+    <!-- NOTE: gotta fix this up once you in data on the JSON -->
+    <script type="text/x-template" id="overlay-template">
+        <div class="overlay overlay--hide" v-bind:id="houseId">
+            <div class="overlay__content">
+
+            <div class="overlay__carousel">
+                <div class="overlay__btnprev" v-on:click="prevImage()">
+                    <p><i class="fa fa-angle-left fa-5x" aria-hidden="true"></i></p>
+                </div>
+                <div class="overlay__gallery">
+                    <div class="overlay__img overlay__img--current">
+                        <img src="img/img-01.jpg">
+                    </div>
+                    <div class="overlay__img overlay__img--hide">
+                        <img src="img/img-02.jpg">
+                    </div>
+                </div>
+                <div class="overlay__btnnext" v-on:click="nextImage()">
+                    <p><i class="fa fa-angle-right fa-5x" aria-hidden="true"></i></p>
+                </div>
+            </div>
+        </div>
+        <div class="overlay__info">
+            <h1>14 Platt Pl, 10605</h1>
+            <p class="overlay__paragraph">The names Bond. James Bond.</p>
+        </div>
+        </div>
+    </script>
+
+
+  </div>
+
   <div id="app">
     <div class="nav-container">
       <div class="nav">
@@ -40,11 +89,14 @@
     <div class="carousel-container">
       <div class="carousel">
         <div class="carousel__list">
-          <house-item v-for="item in items" v-bind:house-name="item.name" v-bind:house-description="item.description" v-bind:house-image="item.image" v-bind:house-link="item.name"></house-item>
+          <house-item v-for="(item, index) in items" v-bind:house-name="item.name" v-bind:house-description="item.description" v-bind:house-image="item.image" v-bind:house-link="item.link" v-bind:house-id="index"></house-item>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="overlay-container">
+        <overlay v-for="(item, index) in items" v-bind:house-id="index"></overlay>
+    </div>
   <script src="static/script.js"></script>
 </body>
 
