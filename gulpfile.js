@@ -1,5 +1,4 @@
 var gulp      = require('gulp');
-var pug       = require('gulp-pug');
 var sass      = require('gulp-sass');
 var rename    = require('gulp-rename');
 var prettify  = require('gulp-html-prettify');
@@ -9,9 +8,9 @@ var browser   = require('browser-sync').create();
 var paths = {
     dest: './dist',
     static: './dist/static',
-    pug: './src/index.pug',
     sass: './src/sass/imports.sass',
-    js: './src/js/*.js'
+    js: './src/js/*.js',
+    html: './src/**/*.html'
 }
 
 gulp.task('browser', function() {
@@ -20,14 +19,6 @@ gulp.task('browser', function() {
             baseDir: "./dist"
         }
     });
-});
-
-gulp.task('pug', function () {
-    return gulp.src(paths.pug)
-    .pipe(pug())
-    .pipe(prettify({indent_char: ' ', indent_size: 2}))
-    .pipe(rename('/index.html'))
-    .pipe(gulp.dest(paths.dest));
 });
 
 gulp.task('sass', function () {
@@ -42,13 +33,18 @@ gulp.task('js', function () {
     .pipe(gulp.dest(paths.static));
 });
 
-gulp.task('produce', function () {
-    gulp.start('pug', 'sass', 'js');
+gulp.task('html', function () {
+    return gulp.src(paths.html)
+    .pipe(gulp.dest(paths.dest));
 });
 
-gulp.task('default', ['pug', 'sass', 'browser'], function () {
+gulp.task('prod', function () {
+    gulp.start('html', 'sass', 'js');
+});
+
+gulp.task('default', ['html', 'sass', 'browser'], function () {
     gulp.watch('src/sass/**/*.*', ['sass']);
-    gulp.watch('src/**/*.pug', ['pug']);
+    gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/js/*.js', ['js']);
     gulp.watch('dist/**/*.*').on('change', browser.reload);
 });

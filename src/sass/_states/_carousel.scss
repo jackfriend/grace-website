@@ -1,0 +1,19 @@
+.carousel--mobile {
+    height: 100vh;
+    margin: 0 0 0 200px;
+}
+
+.carousel__list--mobile {
+    white-space: normal;
+    margin: 0;
+}
+
+.carousel__item--mobile {
+    display: block;
+    margin: 25px auto;
+    max-width: 100%;
+}
+
+.carousel__item--mobile:first-child {
+    margin: 25px auto;
+}

@@ -39,3 +39,16 @@ h1, h2, h3, h4, h5, h6, p, span, a {
         color: #009688;
     }
 }
+
+.overlay {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5em;
+        font-weight: 400;
+        color: #333;
+    }
+
+    p {
+        color: #222;
+        font-weight: 200;
+    }
+}
