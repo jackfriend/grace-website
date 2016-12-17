@@ -567,8 +567,14 @@ html, body, #app {
   .overlay__btnprev p, .overlay__btnnext p {
     color: #ffffff; }
 
+.overlay__gallery {
+  max-width: 530px; }
+
+.overlay__img {
+  max-width: 530px; }
+
 .overlay__img img {
-  width: 530px; }
+  max-width: 530px; }
 
 .overlay__info {
   max-width: 500px;
@@ -615,6 +621,9 @@ html, body, #app {
 .carousel__item--mobile:first-child {
   margin: 25px auto; }
 
+.carousel--hide {
+  display: none; }
+
 .overlay-container--active {
   display: block; }
 
@@ -629,3 +638,12 @@ html, body, #app {
 
 .overlay__img--hide {
   display: none; }
+
+.overlay__btnprev--mobile, .overlay__btnnext--mobile {
+  display: none; }
+
+.overlay__gallery--mobile {
+  width: 100%; }
+
+.overlay__img--mobile img {
+  width: 100%; }
