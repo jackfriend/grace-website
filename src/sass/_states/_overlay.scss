@@ -17,3 +17,15 @@
 .overlay__img--hide {
     display: none;
 }
+
+.overlay__btnprev--mobile, .overlay__btnnext--mobile {
+    display: none;
+}
+
+.overlay__gallery--mobile {
+    width: 100%;
+}
+
+.overlay__img--mobile img {
+    width: 100%;
+}

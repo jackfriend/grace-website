@@ -31,11 +31,15 @@
 }
 
 .overlay__gallery {
+    max-width: 530px;
+}
 
+.overlay__img {
+    max-width: 530px;
 }
 
 .overlay__img img {
-    width: 530px;
+    max-width: 530px;
 }
 
  // overlay__info

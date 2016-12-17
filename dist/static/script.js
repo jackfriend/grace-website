@@ -76,20 +76,26 @@ var app = new Vue({
 });
 
 // repsonsive for width
-if (  $(window).width() <= 480 ) {
+if (  $(window).width() <= 640 ) {
     $('.nav-container').addClass('nav-container--mobile');
     $('.nav').addClass('nav--mobile type');
     $('.nav__logo').addClass('nav__logo--mobile');
     $('.nav__list').addClass('nav__list--mobile');
     $('.nav__madeby').addClass('nav__madeby--mobile');
+    $('.carousel').addClass('carousel--hide');
+    $('.overlay__btnprev').addClass('overlay__btnprev--mobile');
+    $('.overlay__btnnext').addClass('overlay__btnnext--mobile');
+    $('.overlay__gallery').addClass('overlay__gallery--mobile');
+    $('.overlay__gallery').addClass('overlay__gallery--mobile');
+    $('.overlay__img').addClass('overlay__img--mobile');
 };
 
 if ( $(window).width() <= 720 ) {
     $('.carousel').addClass('carousel--mobile');
     $('.carousel__list').addClass('carousel__list--mobile');
     $('.carousel__item').addClass('carousel__item--mobile');
+    $('overlay__carousel').addClass('overlay__carousel--mobile');
 }
-
 
 // to deactivate the overlay
 $('.overlay-container').on('click', function (event) {
