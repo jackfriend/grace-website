@@ -22,6 +22,10 @@
     display: none;
 }
 
+.overlay__mobilebtnprev--mobile, .overlay__mobilebtnnext--mobile {
+    display: inline-block;
+}
+
 .overlay__gallery--mobile {
     width: 100%;
 }

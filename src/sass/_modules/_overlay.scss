@@ -30,6 +30,16 @@
     }
 }
 
+.overlay__mobilebtnprev, .overlay__mobilebtnnext {
+    display: none;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    & p {
+        color: #ffffff;
+    }
+}
+
 .overlay__gallery {
     max-width: 530px;
 }

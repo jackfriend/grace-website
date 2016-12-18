@@ -58,7 +58,6 @@ Vue.component('overlay', {
     }
 });
 
-
 // init the app
 var app = new Vue({
     el: '#app',
@@ -71,6 +70,9 @@ var app = new Vue({
             var $overlayContainer = $('.overlay-container');
             $overlayContainer.addClass('overlay-container--active');
             $overlayContainer.find('#' + houseId).addClass('overlay--show').removeClass('overlay--hide');
+        },
+        onTap: function () {
+            $('body').text('filler');
         }
     }
 });
@@ -87,6 +89,8 @@ if (  $(window).width() <= 640 ) {
     $('.overlay__btnnext').addClass('overlay__btnnext--mobile');
     $('.overlay__gallery').addClass('overlay__gallery--mobile');
     $('.overlay__gallery').addClass('overlay__gallery--mobile');
+    $('.overlay__mobilebtnprev').addClass('overlay__mobilebtnprev--mobile');
+    $('.overlay__mobilebtnnext').addClass('overlay__mobilebtnnext--mobile');
     $('.overlay__img').addClass('overlay__img--mobile');
 };
 

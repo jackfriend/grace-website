@@ -567,6 +567,13 @@ html, body, #app {
   .overlay__btnprev p, .overlay__btnnext p {
     color: #ffffff; }
 
+.overlay__mobilebtnprev, .overlay__mobilebtnnext {
+  display: none;
+  margin: 0 auto;
+  padding: 0 30px; }
+  .overlay__mobilebtnprev p, .overlay__mobilebtnnext p {
+    color: #ffffff; }
+
 .overlay__gallery {
   max-width: 530px; }
 
@@ -641,6 +648,9 @@ html, body, #app {
 
 .overlay__btnprev--mobile, .overlay__btnnext--mobile {
   display: none; }
+
+.overlay__mobilebtnprev--mobile, .overlay__mobilebtnnext--mobile {
+  display: inline-block; }
 
 .overlay__gallery--mobile {
   width: 100%; }
