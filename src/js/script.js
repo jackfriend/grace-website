@@ -33,7 +33,7 @@ Vue.component('house-item', {
 // gotta create a new overlay object for each house
 Vue.component('overlay', {
     template: '#overlay-template',
-    props: ['houseId'],
+    props: ['houseId', 'houseName', 'houseImages', 'houseDates', 'houseDescription'],
     methods: {
         nextImage: function () {
             var $current = $('.overlay__img--current');

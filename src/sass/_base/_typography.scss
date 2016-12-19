@@ -1,34 +1,41 @@
+$grey-text: #494949;
+$black-text: #222222;
+$teal-text: #009688;
+
+$sans: 'Roboto', sans-serif;
+$monospace: 'Inconsolata', monospace;
+
 .nav__logo, .nav__list, .nav__madeby {
-    font-family: 'Source Sans Pro';
+    font-family: $sans;
     font-size: .9em;
 }
 
 a {
     text-decoration: none;
-    color: #494949;
+    color: $grey-text;
     &:hover {
-        color: #000000;
+        color: $black-text;
     }
 }
 
 .type__code {
-    font-family: 'Inconsolata', monospace;
+    font-family: $monospace;
     font-size: 1em;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, a {
-    font-family: 'Roboto', sans-serif;
+h1, h2, h3, h4, h5, h6, ol, ul, li, p, span, a {
+    font-family: $sans;
 }
 
 .carousel__item {
     h1, h2, h3, h4, h5, h6 {
         font-size: 1.5em;
         font-weight: 400;
-        color: #333;
+        color: $grey-text;
     }
 
     p {
-        color: #222;
+        color: $black-text;
         font-weight: 200;
     }
 
@@ -36,7 +43,7 @@ h1, h2, h3, h4, h5, h6, p, span, a {
         text-transform: uppercase;
         font-size: 1.1em;
         font-weight: 600;
-        color: #009688;
+        color: $teal-text;
     }
 }
 
@@ -44,11 +51,11 @@ h1, h2, h3, h4, h5, h6, p, span, a {
     h1, h2, h3, h4, h5, h6 {
         font-size: 1.5em;
         font-weight: 400;
-        color: #333;
+        color: $grey-text;
     }
 
-    p {
-        color: #222;
+    p, ul, li {
+        color: $black-text;
         font-weight: 200;
     }
 }

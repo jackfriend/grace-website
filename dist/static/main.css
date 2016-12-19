@@ -402,30 +402,37 @@ template {
 [hidden] {
   display: none; }
 
+/* Lists
+   ========================================================================== */
+ul, ol {
+  list-style-type: none;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0; }
+
 .nav__logo, .nav__list, .nav__madeby {
-  font-family: 'Source Sans Pro';
+  font-family: "Roboto", sans-serif;
   font-size: .9em; }
 
 a {
   text-decoration: none;
   color: #494949; }
   a:hover {
-    color: #000000; }
+    color: #222222; }
 
 .type__code {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-size: 1em; }
 
-h1, h2, h3, h4, h5, h6, p, span, a {
-  font-family: 'Roboto', sans-serif; }
+h1, h2, h3, h4, h5, h6, ol, ul, li, p, span, a {
+  font-family: "Roboto", sans-serif; }
 
 .carousel__item h1, .carousel__item h2, .carousel__item h3, .carousel__item h4, .carousel__item h5, .carousel__item h6 {
   font-size: 1.5em;
   font-weight: 400;
-  color: #333; }
+  color: #494949; }
 
 .carousel__item p {
-  color: #222;
+  color: #222222;
   font-weight: 200; }
 
 .carousel__item .carousel__button a {
@@ -437,10 +444,10 @@ h1, h2, h3, h4, h5, h6, p, span, a {
 .overlay h1, .overlay h2, .overlay h3, .overlay h4, .overlay h5, .overlay h6 {
   font-size: 1.5em;
   font-weight: 400;
-  color: #333; }
+  color: #494949; }
 
-.overlay p {
-  color: #222;
+.overlay p, .overlay ul, .overlay li {
+  color: #222222;
   font-weight: 200; }
 
 html, body, #app {
@@ -549,7 +556,8 @@ html, body, #app {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.9); }
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto; }
 
 .overlay__content {
   text-align: center;
