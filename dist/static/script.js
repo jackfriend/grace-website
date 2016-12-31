@@ -1,20 +1,3 @@
-// this function gets the data
-var fetchData = function (url) {
-    var data;
-    $.ajax({
-        url: url,
-        type: 'GET',
-        dataType: 'json',
-        async: false,
-        success: function (res) {
-            data = res;
-            console.log(res);
-        }
-    });
-    return data
-};
-
-
 // create an object for each house
 Vue.component('house-item', {
     template: '#house-item-template',
@@ -62,7 +45,7 @@ Vue.component('overlay', {
 var app = new Vue({
     el: '#app',
     data: {
-        items: fetchData('static/data.json')
+        items: $houseData
     },
     methods: {
         openOverlay: function (houseId) {

@@ -1,4 +1,4 @@
-[
+var $houseData =  [
     {
         "name": "Bridgehampton, NY",
         "link": "#bridgehampton-ny",
